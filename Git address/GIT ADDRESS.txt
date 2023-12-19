@@ -1,0 +1,11 @@
+	
+	sir er js github address:
+  			git clone https://github.com/asamamun/javascript-r57
+
+	sir er PHP github address:
+     		 	git clone https://github.com/asamamun/R57-PHP.git
+
+	my github address:
+    			git clone https://github.com/MD-IQBAL-HOSAIN/wdpf-project.git
+
+			git clone https://github.com/MD-IQBAL-HOSAIN/PHP.git
