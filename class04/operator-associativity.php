@@ -10,3 +10,8 @@ echo $oldInv;
 //&& || AND OR
 echo "<br>";
 echo 5>6 xor 6<3;// 0 or 0 //0
+echo "<br>";
+
+
+
+?>
