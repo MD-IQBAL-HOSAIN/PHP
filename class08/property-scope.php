@@ -5,6 +5,7 @@
     <li>private: the property or method can be accessed within the class and by classes derived from that class</li>
     <li>protected:  the property or method can ONLY be accessed within the class</li>
 </ul>
+
 <?php
 class A{
     //property
@@ -21,6 +22,8 @@ class A{
         return $this->y;
     }
 }
+
+
 $o = new A();
 $o->x = 8;
 echo $o->x;
