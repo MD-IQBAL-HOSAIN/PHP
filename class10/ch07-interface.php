@@ -5,14 +5,17 @@
 abstract class A{
     abstract function aa();
 }
+
 abstract class B{
     abstract function bb();
 }
+
 interface iStudent{
     function code();
     function read();
     function sleep();
 }
+
 interface iActivities{
     function cook();
     function decorate();

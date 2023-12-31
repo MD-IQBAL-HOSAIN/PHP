@@ -1,6 +1,8 @@
 <h3>
 Inheritance
 </h3>
+
+
 <?php
 class Employee{
     public $name="not set yet";
@@ -26,7 +28,9 @@ class Executive extends Employee{
 
 $sathi = new Executive();
 echo $sathi->name . "<br>";
-// echo $sathi->salary . "<br>";
+//echo $sathi->salary . "<br>";
 // echo $sathi->department . "<br>";
 print_r($sathi->info())
+
+
 ?>
