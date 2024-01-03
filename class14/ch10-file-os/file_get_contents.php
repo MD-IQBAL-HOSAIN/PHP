@@ -7,7 +7,7 @@ $links = [
 foreach ($links as $key => $value) {
     $fh = fopen($key.date("y-m-d-h").".html","w");
 fwrite($fh, file_get_contents($value));
-fclose($fh);
+//fclose($fh);
 }
 
 //cron job
