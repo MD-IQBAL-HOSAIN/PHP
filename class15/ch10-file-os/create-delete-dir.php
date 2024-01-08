@@ -1,11 +1,11 @@
 <?php
-$url = "E:/test";
+$url = "D:/test";
 /* mkdir($url);
 for ($i=1; $i <= 500; $i++) { 
     mkdir($url."/".$i);
 } */
 // sleep(5);
-for ($i=1; $i <=500 ; $i++) { 
+for ($i=1; $i <=50 ; $i++) { 
     rmdir($url."/".$i);
 }
 

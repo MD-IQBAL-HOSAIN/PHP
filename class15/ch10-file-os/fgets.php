@@ -3,7 +3,7 @@ This function has been DEPRECATED as of PHP 7.3.0, and REMOVED as of PHP 8.0.0. 
 <?php
 $file = "fgetsdata.txt";
 $fh = fopen($file, 'r');
-echo fgetss($fh,null,"");
+echo fgets($fh,null,"");
 echo "<hr>";
 echo fgets($fh);
 fclose($fh);
