@@ -35,13 +35,16 @@
         }
     </style>
  </head>
+
  <body>
     <div class="container">
     <h1 id="title">Please select a date to calculate your age</h1>
+
     <form action="" method="post">
         <input type="date" name="dob" required>
         <input id="calc" type="submit" name="calc" value="Calculate Age">
     </form>
+    
     <p id="result">
  <?php
 if(isset($_POST['dob'])){

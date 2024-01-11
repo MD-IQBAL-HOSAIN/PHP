@@ -1,7 +1,7 @@
 <h1>strtotime returns unix timestamp</h1>
 <h1>+45 days</h1>
 <?php
-$futuredate = strtotime("+45 days");
+$futuredate = strtotime("+50 days");
 echo date("F d, Y", $futuredate);
 ?>
 <h1>-56 days</h1>
@@ -17,5 +17,6 @@ echo date("F d, Y", $futuredate);
 <h1>2 Hours</h1>
 <?php
 $futuredate = strtotime("2 Hours");
-echo date("Y-m-d H:i:s a", $futuredate);
+echo date("Y-m-d H:i:s a", $futuredate)."<br>";
+echo date("Y-m-d , H:i:s a", $futuredate);
 ?>

@@ -4,7 +4,7 @@ echo $var;
 ?>
 <hr>
 <?php
-$var = filter_var("abc@gmail.c", FILTER_VALIDATE_EMAIL);
+$var = filter_var("abc@gmail.com", FILTER_VALIDATE_EMAIL);
 echo $var;
 ?>
 <hr>

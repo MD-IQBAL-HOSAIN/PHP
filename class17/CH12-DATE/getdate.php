@@ -9,4 +9,4 @@ foreach (getdate() as $key => $value) {
 <h1>timestamp</h1>
 <?php echo getdate()[0];?><hr>
 <?php echo time();?><hr>
-<?php echo date("U");?><hr>
+<?php echo date("U");?> <hr>
