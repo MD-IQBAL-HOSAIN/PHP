@@ -1,10 +1,13 @@
 <?php
 $allowed_files = ["image/jpeg", "image/png", "image/gif", "image/webp","application/pdf"];
+
 if(isset($_POST['upload'])){
 $file = $_FILES['myfile'];
+
 echo "<pre>";
 var_dump($file);
 echo "</pre>";
+
 if(in_array($file['type'], $allowed_files)){
 move_uploaded_file($file['tmp_name'],"myfiles/".time()."_".rand(1,100000)."_".$file['name']);
 }
@@ -18,7 +21,7 @@ else{
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>s.form</title>
 </head>
 <body>
     <h1>File upload</h1>
