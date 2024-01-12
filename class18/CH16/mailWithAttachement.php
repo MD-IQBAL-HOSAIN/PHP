@@ -63,6 +63,8 @@ $m = $mail?"<h1>Mail sent.</h1>":"<h1>Mail sending failed.</h1>";
 }
 ?>
 <?php if(isset($m)) echo $m; ?>
+
+
 <form action='' method='post' enctype="multipart/form-data">
 To:
 <input type='text' name='to' />

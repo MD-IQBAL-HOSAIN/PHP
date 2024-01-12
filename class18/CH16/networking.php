@@ -17,19 +17,20 @@ int checkdnsrr(string host [, string type])</p>
  $domain = "codetodo.com";
  $recordexists = checkdnsrr($domain, "ANY");
  if ($recordexists)
- echo "The domain '$domain' has a DNS record!";
+ echo "<h2>The domain '$domain' has a DNS record!</h2>";
  else
  echo "The domain '$domain' does not appear to have a DNS record!";
 ?>
 <hr>
+
 <?php
 $email = "ceo@example.com";
 $domain = explode("@",$email);
 $valid = checkdnsrr($domain[1], "MX");
 if($valid)
-echo "The domain has an MX record!";
+echo "<strong>The domain has an MX record!</strong>";
 else
-echo "Cannot locate MX record for $domain[1]!";
+echo "<strong>Cannot locate MX record for $domain[1]!</strong>";
 ?>
 <h3>dns_get_record() </h3>
 <p>The dns_get_record() function returns an array consisting of various DNS resource 
