@@ -6,3 +6,4 @@ if(isset($_SESSION['loggedin']) && $_SESSION['loggedin']){
     exit;
 }
 header("location:login.php");
+?>

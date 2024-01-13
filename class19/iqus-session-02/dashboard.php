@@ -1,9 +1,11 @@
 <?php
 session_start();
-if(!isset($_SESSION['loggedin']) && !$_SESSION['loggedin']){
-    header("Location: login.php");
+if (!isset($_SESSION['loggedin']) && !$_SESSION['loggedin']) {
+    header("location: index.php");
 }
+
 ?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -12,9 +14,7 @@ if(!isset($_SESSION['loggedin']) && !$_SESSION['loggedin']){
     <title>Document</title>
 </head>
 <body>
-    <h1><?= $_SESSION['user'] ?>, welcome to Dashboard, only restricted users can view this page</h1>
-    
+    <h1><?= $_SESSION['user']?> , Welcome to dashboard</h1>
     <a href="logout.php">Logout</a>
-    
 </body>
 </html>

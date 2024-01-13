@@ -1,7 +1,7 @@
 <?php
 session_start();
-echo $_SERVER['PHP_AUTH_USER'];
-echo $_SERVER['PHP_AUTH_PW'];
+// echo $_SERVER['PHP_AUTH_USER'];
+// echo $_SERVER['PHP_AUTH_PW'];
 exit;
 ?>
 <h1>Hard coded authentication</h1>
@@ -12,6 +12,7 @@ if(is_null($_SERVER['PHP_AUTH_USER']) && is_null($_SERVER['PHP_AUTH_USER'])){
     header('WWW-Authenticate: Basic Realm="Authentication"');
     header("HTTP/1.1 401 Unauthorized");
 }
+
 if (! isset($_SERVER['PHP_AUTH_USER']) || ! isset($_SERVER['PHP_AUTH_PW'])) {
  header('WWW-Authenticate: Basic Realm="Authentication"');
  header("HTTP/1.1 401 Unauthorized");
