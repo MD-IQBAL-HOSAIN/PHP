@@ -37,7 +37,7 @@
                 <option>Select</option>
                 <option value="good">Good</option>
                 <option value="batter">Batter</option>
-                <option value="dest">Best</option>
+                <option value="best">Best</option>
             </select>
         </div>
         <input name="submit" type="submit" value="upload" />

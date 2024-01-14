@@ -5,8 +5,8 @@ if(isset($_POST['k']) && isset($_POST['d'])){
     require "class.php";
     $key = $_POST['k'];
     $message = $_POST['d'];
-    $o = new AES($key);
-    $result = $o->encrypt($message);
+    $obj = new AES($key);
+    $result = $obj->encrypt($message);
     // echo $result;
 }
 
