@@ -1,7 +1,7 @@
 <?php
 session_start();
 function login(){
-    $user = array('admin','sabbir','kamal','jamal');
+    $user = array('admin','sabbir','kamal','jamal',"Bijoy");
     $pass = array('1234');
     if(isset($_POST['submit'])){
         if(in_array($_POST['user'], $user) && in_array($_POST['pass'], $pass)){
