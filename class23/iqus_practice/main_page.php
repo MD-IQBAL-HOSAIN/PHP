@@ -12,9 +12,9 @@ echo "<hr>";
 
 if ($show->num_rows) {
     while ($shows = $show->fetch_assoc()) {
-        echo "id-".$shows['actor_id'] . "<br><br>";
+        echo "id-".$shows['actor_id'] . "<br>";
         echo "First_Name:".$shows['first_name'] . "<br>";
-        echo "First_Name:".$shows['last_name'] . "<br>";
+        echo "First_Name:".$shows['last_name'] . "<br><br>";
     }
 }
 

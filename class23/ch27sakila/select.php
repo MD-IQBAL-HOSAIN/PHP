@@ -3,7 +3,8 @@ require "connection.php";
 
 $query = "select * from film";
 $result = $conn->query($query);
-// var_dump($result);
+//var_dump($result);
+//echo "<hr>";
 if($result->num_rows){
     while($row = $result->fetch_assoc()){
         // while($row = $result->fetch_row()){
