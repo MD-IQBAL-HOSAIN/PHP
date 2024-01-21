@@ -1,8 +1,11 @@
 <?php
 if(isset($_FILES['fname'])){
     $fileinfo = $_FILES['fname'];
+    
     $allowed = ['application/pdf','application/msword','image/webp','image/gif','image/jpg','image/jpeg','image/png'];
+
     $size =  $fileinfo['size'];
+
     if(in_array($fileinfo['type'],$allowed) && $size <= 400*1024){
        move_uploaded_file($fileinfo['tmp_name'],"files/".$fileinfo['name']);
        $messaeg = "success!!"; 
