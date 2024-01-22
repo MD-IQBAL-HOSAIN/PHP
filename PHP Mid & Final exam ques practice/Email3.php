@@ -1,22 +1,19 @@
 <?php
-  if (isset($_POST['submit'])) {
-      $user = $_POST['user'];
-      $mail = $_POST['mail'];
-      $nameLength = strlen($user);
-      if ($nameLength < 4 || $nameLength > 8) {
-         echo "<h3> invalid user name. Name should be between 4 to 8 charecter.</h3>";
-      }
-      else {
+if (isset($_POST['submit'])) {
+    $user = $_POST['user'];
+    $mail = $_POST['mail'];
+    $nameLength = strlen($user);
+    if ($nameLength < 4 || $nameLength > 8) {
+        echo "<h3> invalid user name. Name should be between 4 to 8 charecter.</h3>";
+    } else {
         echo "<h3>valid User !! </h3>";
-      }
-       if (filter_var($mail, FILTER_VALIDATE_EMAIL)) {
-          echo "<h3>Valid Email !!<h3>";
-       } else {
+    }
+    if (filter_var($mail, FILTER_VALIDATE_EMAIL)) {
+        echo "<h3>Valid Email !!<h3>";
+    } else {
         echo "<h3>Invalid Email (give: @ and/or dot).<h3>";
-       }
-
-
-  }
+    }
+}
 ?>
 
 <!DOCTYPE html>
