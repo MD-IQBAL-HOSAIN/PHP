@@ -1,11 +1,11 @@
 <?php
 session_start();
-require "conn.php";
+require "connection.php";
  // Create the query
- $query = 'SELECT id, username, create_at FROM users ORDER by username';
+ $query = 'SELECT id, product_name, validity FROM products';
  // Send the query to MySQL
- $result = $conn->query($query);
- $conn->close();
+ $result = $con->query($query);
+ $con->close();
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -22,7 +22,7 @@ require "conn.php";
 <body>
     <div class="container">
     <div class="d-flex justify-content-between">
-    <h3>User Data</h3>
+    <h3>daraz_company_ltd</h3>
     <a href="user_create.php" class="btn btn-primary"><i class="bi bi-person-plus"></i></a>
     </div>
     <hr>
@@ -42,9 +42,10 @@ if(isset($_SESSION['message'])){
     
         <tr>
             <th>ID</th>
-            <th>User Name</th>
-            <th>Registration Time</th>
+            <th>product_name</th>
+            <th>validity</th>
             <th>Action</th>
+           
         </tr>
         
         
@@ -52,8 +53,8 @@ if(isset($_SESSION['message'])){
  while($row = $result->fetch_assoc()){
     echo "<tr>
     <td>{$row['id']}</td>
-    <td>{$row['username']}</td>
-    <td>{$row['create_at']}</td>
+    <td>{$row['product_name']}</td>
+    <td>{$row['validity']}</td>
     <td><a href='user_edit.php?id={$row['id']}'><i class='bi bi-pencil-square'></i></a> <a href='user_delete.php?id={$row['id']}' onclick='return confirm(\"Are you sure?\")'><i class='bi bi-trash3'></i></a> </td>
 </tr>";
      }

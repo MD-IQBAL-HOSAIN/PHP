@@ -1,6 +1,6 @@
 <?php
 
-$con = new mysqli("localhost","root","","data_source") or die("connection problem!!");
+$con = new mysqli("localhost","root","","daraz_company_ltd") or die("connection problem!!");
 $con->set_charset("utf8");
 
 ?>
