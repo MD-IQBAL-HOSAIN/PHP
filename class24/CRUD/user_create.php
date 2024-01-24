@@ -26,7 +26,7 @@ echo "<br>current user ({$user}) id:" . $conn->insert_id; */
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>index page</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
 
@@ -62,7 +62,9 @@ echo "<br>current user ({$user}) id:" . $conn->insert_id; */
                     <i class="fas fa-user fa-lg me-3 fa-fw"></i>
                     <div class="form-outline flex-fill mb-0">
                       <input type="text" name="username" id="form3Example1c" class="form-control" required placeholder="Your Name" />
-                      <label class="form-label" for="form3Example1c">Your Name</label>
+                       <!-- Your Name -->
+                      <label class="form-label" for="form3Example1c"></label>
+                      
                     </div>
                   </div>
 
@@ -78,7 +80,9 @@ echo "<br>current user ({$user}) id:" . $conn->insert_id; */
                     <i class="fas fa-lock fa-lg me-3 fa-fw"></i>
                     <div class="form-outline flex-fill mb-0">
                       <input type="password" name="pass1" id="form3Example4c" class="form-control" required placeholder="password" />
-                      <label class="form-label" for="form3Example4c">Password</label>
+                       <!-- Password -->
+                      <label class="form-label" for="form3Example4c"></label>
+                     
                     </div>
                   </div>
 
@@ -86,7 +90,8 @@ echo "<br>current user ({$user}) id:" . $conn->insert_id; */
                     <i class="fas fa-key fa-lg me-3 fa-fw"></i>
                     <div class="form-outline flex-fill mb-0">
                       <input type="password" name="pass2" id="form3Example4cd" class="form-control" required placeholder="retype password" />
-                      <label class="form-label" for="form3Example4cd">Repeat your password</label>
+                      <!-- Repeat your password -->
+                      <label class="form-label" for="form3Example4cd"></label>
                     </div>
                   </div>
 

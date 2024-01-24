@@ -48,10 +48,10 @@ if(isset($_GET['id'])){
         ?>
         <hr>
         <form action="" method="post">
-            <input type="hidden" name="id" value="<?= $row['id'] ?>">
-            <input type="text" name="username" value="<?= $row['username'] ?>" required>
-            <input type="password" name="pass1" id="">
-            <input type="password" name="pass2" id="">
+            <input type="hidden" name="id" value="<?= $row['id'] ?>"> <br> <br>
+            <input type="text" name="username" placeholder="user name" value="<?= $row['username'] ?>" required> <br> <br>
+            <input type="password" placeholder="password" name="pass1" id=""> <br><br>
+            <input type="password" placeholder="re-type password" name="pass2" id=""> <br> <br>
             <input type="submit" value="Update">
         </form>
     </body>
