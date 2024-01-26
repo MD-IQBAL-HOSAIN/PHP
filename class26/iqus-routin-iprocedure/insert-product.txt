@@ -1,0 +1,4 @@
+create procedure public_info (in pname varcher(100), in ppassword varchar(100), in create_at timestamp)
+begin 
+insert into users values (null,pname,ppassword,create_at);
+end//

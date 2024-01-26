@@ -1,4 +1,4 @@
-create procedure More_products(in pname varchar(100), in pprice float(10,2, in pvalidate varchar(50)))
+create procedure More_products(in pname varchar(100), in pprice float(10,2), in pvalidate varchar(50))
 begin
-insert into users values(null,pname,pprice,pvalidate);
+insert into products values(null,pname,pprice,pvalidate);
 end//
