@@ -19,15 +19,15 @@ RETURN calcvat;
  select *, vat(id) as vat from products where 1;
 
 
-CREATE TABLE `sales` (
+CREATE TABLE `sales2` (
   `id` int(5) primary key auto_increment NOT NULL,
   `employee_id` int(8) NOT NULL,
   `revenue` float(10,2) NOT NULL,
   `created_at` timestamp NOT NULL DEFAULT current_timestamp()
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
 
-INSERT INTO `sales` (`id`, `employee_id`, `revenue`, `created_at`) VALUES
+INSERT INTO `sales2` (`id`, `employee_id`, `revenue`, `created_at`) VALUES
 (1, 101, 15000.00, '2024-01-27 03:48:52'),
 (2, 101, 25000.00, '2024-01-27 03:48:52'),
 (3, 101, 5000.00, '2024-01-27 03:49:07'),
@@ -38,7 +38,6 @@ INSERT INTO `sales` (`id`, `employee_id`, `revenue`, `created_at`) VALUES
 
 
 select sum(revenue) from sales where 5=5;
- select sum(revenue) from sales where 1 group by employee_id;
  select employee_id, sum(revenue) from sales where 1 group by employee_id;
  select employee_id, sum(revenue) from sales where employee_id='102' group by employee_id;
 
