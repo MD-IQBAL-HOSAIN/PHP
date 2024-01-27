@@ -38,6 +38,7 @@ INSERT INTO `sales2` (`id`, `employee_id`, `revenue`, `created_at`) VALUES
 
 
 select sum(revenue) from sales where 5=5;
+ select sum(revenue) from sales where 1 group by employee_id;
  select employee_id, sum(revenue) from sales where 1 group by employee_id;
  select employee_id, sum(revenue) from sales where employee_id='102' group by employee_id;
 
