@@ -49,3 +49,17 @@ VALUES ('2016/02/10', 99.99, 1),
 
 INSERT INTO orders (order_date, amount, customer_id)
 VALUES ('2016/06/06', 33.67, 95);
+
+
+-----query_command-------
+select * from customers;
+select * from orders;
+
+----k koto takar order korce or spent korce-----
+select first_name, last_name,customer_id, sum(amount) as total_amount from customers 
+INNER JOIN orders ON customers.id = orders.customer_id
+GROUP BY customers.id  
+ORDER BY `total_amount` DESC;
+....Sathe eta jukto korle besi amount khoroch kari age asbe..
+GROUP BY customers.id order by total_amount DESC;
+// for sorting use"GROUP BY"
