@@ -63,3 +63,7 @@ ORDER BY `total_amount` DESC;
 ....Sathe eta jukto korle besi amount khoroch kari age asbe..
 GROUP BY customers.id order by total_amount DESC;
 // for sorting use"GROUP BY"
+
+
+-----delete command----
+DELETE FROM `customers` WHERE `customers`.`id` = 6;
