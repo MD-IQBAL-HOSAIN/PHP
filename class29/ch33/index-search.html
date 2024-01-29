@@ -27,7 +27,12 @@
             <li>normal</li>
             <li>full-text : SELECT * FROM film WHERE MATCH(description) AGAINST 
                 ('fight');</li>
-        </ul>        
+        </ul>  
+        <ul>
+            <li>like & MATCH command:</li>
+            <li>select * from `film` where `title` like '%Action%';</li>
+            <li>select * from `film` where MATCH(title) AGAINST('%Action%'); </li>
+        </ul>      
     </p>
 </body>
 </html>
