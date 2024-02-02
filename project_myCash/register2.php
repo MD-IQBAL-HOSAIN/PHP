@@ -104,7 +104,7 @@ echo "<br>current user ({$user}) id:" . $conn->insert_id; */
                       </div>
                       <div class="d-flex justify-content-center mx-4 mb-3 mb-lg-4">
                         <div class="btn btn-primary btn-lg m-2">
-                          <a href="login.php" style="text-decoration: none; color:white;">User Login</a>
+                          <a href="login.php" style="text-decoration: none; color:white;">Admin Login</a>
                         </div>
 
                         <!-- <div class="btn btn-primary btn-lg m-2">

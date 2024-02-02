@@ -54,7 +54,7 @@ if(isset($_SESSION['message'])){
     <td>{$row['id']}</td>
     <td>{$row['username']}</td>
     <td>{$row['create_at']}</td>
-    <td><a href='user_edit.php?id={$row['id']}'><i class='bi bi-pencil-square'></i></a> <a href='user_delete.php?id={$row['id']}' onclick='return confirm(\"Are you sure?\")'><i class='bi bi-trash3'></i></a> </td>
+    <td><a href='user_edit.php?id={$row['id']}'><i class='bi bi-pencil-square'></i></a> <a href='user_delete.php?id={$row['id']}' onclick='return confirm(\"Are you sure want to delete ?\")'><i class='bi bi-trash3'></i></a> </td>
 </tr>";
      }
 ?>
