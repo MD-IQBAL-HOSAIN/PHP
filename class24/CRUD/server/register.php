@@ -32,7 +32,7 @@ echo "<br>current user ({$user}) id:" . $conn->insert_id; */
 </head>
 <body>
     <div class="container">
-    <h3>Registration Form</h3>
+    <h3>User Registration Form</h3>
     <hr>
     <section class="vh-100" style="background-color: #eee;">
   <div class="container h-100">
@@ -85,7 +85,7 @@ echo "<br>current user ({$user}) id:" . $conn->insert_id; */
                     <i class="fas fa-key fa-lg me-3 fa-fw"></i>
                     <div class="form-outline flex-fill mb-0">
                       <input type="password" name="pass2" id="form3Example4cd" class="form-control" required placeholder="retype password" />
-                      <label class="form-label" for="form3Example4cd">Repeat your password</label>
+                      <label class="form-label" for="form3Example4cd">Re-type password</label>
                     </div>
                   </div>
 
@@ -105,7 +105,7 @@ echo "<br>current user ({$user}) id:" . $conn->insert_id; */
               </div>
               <div class="col-md-10 col-lg-6 col-xl-7 d-flex align-items-center order-1 order-lg-2">
 
-                <img src="assets/images/register.webp"
+                <img src="assets/images/shark_logo.png"
                   class="img-fluid" alt="Sample image">
 
               </div>

@@ -114,7 +114,7 @@ span.psw {
     <h1><?= $message??""; ?></h1>
 <form action="" method="post">
   <div class="imgcontainer">
-    <img width="60px" src="login.jpeg" alt="" class="avatar">
+    <img width="100px" src="login.jpeg" alt="Avatar" class="avatar">
   </div>
 
   <div class="container">
