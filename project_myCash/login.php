@@ -1,4 +1,5 @@
 <?php
+session_start();
 if(isset($_POST['uname']) && isset($_POST['psw'])){
     $name = $_POST['uname'];
     $pass = $_POST['psw'];
@@ -15,7 +16,7 @@ if(isset($_POST['uname']) && isset($_POST['psw'])){
         // echo $row['password'];
         if(password_verify($pass,$row['password'])){
             // $message =  "valid user";
-            header("Location:dashboard.php");
+            header("Location: dashboard/dashboard.php");
         }
         else{
             $message = "invalid password";
