@@ -5,5 +5,5 @@ IN address VARCHAR(100),
 IN contact VARCHAR(50)
 )
 BEGIN
-insert into manufacturer values(null,name,address,contact);
+insert into manufacturer values(null,name,address,contact,time);
 END//

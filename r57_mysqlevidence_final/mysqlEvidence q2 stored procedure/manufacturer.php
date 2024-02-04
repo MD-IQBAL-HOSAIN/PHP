@@ -3,7 +3,7 @@ if (isset($_POST['name'])) {
    $db = new mysqli("localhost" , "root" , null , "company");;
    $name = $_POST['name'];
    $address = $_POST['address'];
-   $contact = $_POST['contact'];
+   $contact = $_POST['contact'];   
 
    $queryString = "call manufact('$name','$address','$contact')";
 
