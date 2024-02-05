@@ -1,0 +1,7 @@
+CREATE TRIGGER del_menufact_to_product AFTER DELETE on manufacturer FOR EACH ROW
+BEGIN
+DELETE from products where products.manufacturer_id = old.id;
+END//
+
+
+--( এই ট্রিগার কোডটি ম্যানুফ্যাকচারার টেবিল থেকে একটি Record মুছে ফেলার পরে প্রয়োজনীয় কাজ করবে। যখন এই মুছে ফেলা ঘটে, ট্রিগারটি প্রয়োজনীয় কাজ করবে: ম্যানুফ্যাকচারার টেবিল থেকে মুছে ফেলা Record er সাথে সম্পর্কিত প্রোডাক্ট টেবিল থেকে সম্পর্কিত Record মুছে ফেলবে, যেখানে manufacturer_id ম্যানুফ্যাকচারার টেবিলের মুছে ফেলা সারির id মানের সাথে মিলবে (অর্থাৎ ম্যানুফ্যাকচারার টেবিলের মুছে ফেলা সারির id কলামের মান)। )
