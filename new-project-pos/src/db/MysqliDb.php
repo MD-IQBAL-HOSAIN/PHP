@@ -261,7 +261,7 @@ class MysqliDb
      * @param string $charset
      * @param string $socket
      */
-    public function __construct($host = 'localhost', $username = 'root', $password = '', $db = 'lazy_shark', $port = null, $charset = 'utf8', $socket = null)
+    public function __construct($host = 'localhost', $username = 'root', $password = '', $db = 'sharkpos', $port = null, $charset = 'utf8', $socket = null)
     {
         $isSubQuery = false;
 

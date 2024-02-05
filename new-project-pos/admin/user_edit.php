@@ -19,7 +19,7 @@ if(isset($_POST['username'])){
     if($pass1 == $pass2){
         $pass = password_hash($pass1,PASSWORD_DEFAULT);
         $data = [
-            'username' => $username,
+            'name' => $username,
             'password' => $pass,
             'role' => $role
         ];

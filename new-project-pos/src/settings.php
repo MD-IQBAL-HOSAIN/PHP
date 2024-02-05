@@ -5,14 +5,14 @@ if (!function_exists('settings')) {
        $root = "http://localhost/Round-57(PHP_CLASS)/PHP/new-project-pos/"; 
         return [
             'root'  => $root,
-            'companyname'=> 'Gold Digger Enterprise',
+            'companyname'=> 'shapno',
             'logo'=>$root."admin/assets/img/logo.svg",
             'homepage'=> $root,
             'adminpage'=>$root.'admin/',
             'hostname'=> 'localhost',
             'user'=> 'root',
             'password'=> '',
-            'database'=> 'lazy_shark'
+            'database'=> 'sharkpos'
         ];
     }
 }
