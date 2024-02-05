@@ -65,8 +65,8 @@ if (isset($_GET['product_id'])) {
         // $row = $result->fetch_assoc();
         $db->where('id', $id);
         $row = $db->getOne('products');
-        echo '<br><br><br><br>';
-        var_dump($row);
+        // echo '<br><br><br><br>';
+        // var_dump($row);
     }
 }
 ?>
@@ -84,25 +84,101 @@ if (isset($_GET['product_id'])) {
                 <?php
                 // if(isset($message)) echo $message;
                 ?>
-                <hr>
-                <form action="" method="post">
-                    <input type="hidden" name="id" value="<?= $row['id'] ?>"> <br>
-                    <input type="text" name="barcode" value="<?= $row['barcode'] ?>" require> <br>
-                    <input type="text" name="name" value="<?= $row['name'] ?>" require> <br>
-                    <input type="text" name="company_name" value="<?= $row['company_name'] ?>" require> <br>
-                    <input type="text" name="category_id" value="<?= $row['category_id'] ?>" require> <br>
-                    <input type="text" name="supplier_id" value="<?= $row['supplier_id'] ?>" require> <br>
-                    <input type="text" name="wholesale_price" value="<?= $row['wholesale_price'] ?>" require> <br>
-                    <input type="text" name="retail_price" value="<?= $row['retail_price'] ?>" require> <br>
-                    <input type="text" name="purchase_price" value="<?= $row['purchase_price'] ?>" require> <br>
-                    <input type="text" name="quantity" value="<?= $row['quantity'] ?>" require> <br>
-                    <input type="text" name="description" value="<?= $row['description'] ?>" require> <br>
-                    <input type="text" name="tax" value="<?= $row['tax'] ?>" require> <br>
-                    <input type="text" name="created" value="<?= $row['created'] ?>" require> <br>
-                    <input type="submit" value="Update"> <br>
+                <div class="container-md p-5">
+                    <form action="" method="post">
+                        <div class="h2">Porduct Update</div>
+                        <input class="form-control m-2" type="hidden" name="id" value="<?= $row['id'] ?>">
+                        <div class="row">
+                            <div class="col-sm-3">
+                                <div class="input-group mb-3">
+                                    <div class="input-group-text">Barcode</div>
+                                    <input class="form-control" type="text" name="barcode" value="<?= $row['barcode'] ?>" require>
+                                </div>
+                            </div>
+                            <div class="col">
+                                <div class="input-group mb-3">
+                                    <div class="input-group-text">Name</div>
+                                    <input class="form-control" type="text" name="name" value="<?= $row['name'] ?>" require>
+                                </div>
+                            </div>
+                        </div>
 
-                </form>
 
+
+
+                        <div class="row">
+                            <div class="col-sm-6">
+                            <div class="input-group mb-3">
+                            <div class="input-group-text">Company_name</div>
+                            <input class="form-control" type="text" name="company_name" value="<?= $row['company_name'] ?>" require>
+                        </div>
+                            </div>
+                            <div class="col-sm-3">
+                            <div class="input-group mb-3">
+                            <div class="input-group-text">Category_id</div>
+                            <input class="form-control" type="text" name="category_id" value="<?= $row['category_id'] ?>" require>
+                        </div>
+                            </div>
+                            <div class="col-sm-3">
+                            <div class="input-group mb-3">
+                            <div class="input-group-text">Supplier_id</div>
+                            <input class="form-control" type="text" name="supplier_id" value="<?= $row['supplier_id'] ?>" require>
+                        </div>
+                            </div>
+                        </div>
+
+
+                        
+                       
+                       
+                        <div class="input-group mb-3">
+                            <div class="input-group-text">Wholesale_price</div>
+                            <input class="form-control" type="text" name="wholesale_price" value="<?= $row['wholesale_price'] ?>" require>
+                        </div>
+                        <div class="input-group mb-3">
+                            <div class="input-group-text">Retail_price</div>
+                            <input class="form-control" type="text" name="retail_price" value="<?= $row['retail_price'] ?>" require>
+                        </div>
+                        <div class="input-group mb-3">
+                            <div class="input-group-text">Purchase_price</div>
+                            <input class="form-control" type="text" name="purchase_price" value="<?= $row['purchase_price'] ?>" require>
+                        </div>
+                        <div class="input-group mb-3">
+                            <div class="input-group-text">Quantity</div>
+                            <input class="form-control" type="text" name="quantity" value="<?= $row['quantity'] ?>" require>
+                        </div>
+                        <div class="input-group mb-3">
+                            <div class="input-group-text">Description</div>
+                            <input class="form-control" type="text" name="description" value="<?= $row['description'] ?>" require>
+                        </div>
+                        <div class="input-group mb-3">
+                            <div class="input-group-text">TAX</div>
+                            <input class="form-control" type="text" name="tax" value="<?= $row['tax'] ?>" require>
+                        </div>
+                        <div class="input-group mb-3">
+                            <div class="input-group-text">Created Time</div>
+                            <input class="form-control" type="text" name="created" value="<?= $row['created'] ?>" require>
+                        </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                        <input class="btn btn-warning" type="submit" value="Update"> <br>
+
+                    </form>
+                </div>
                 <!-- changed content  ends-->
             </main>
             <!-- footer -->
