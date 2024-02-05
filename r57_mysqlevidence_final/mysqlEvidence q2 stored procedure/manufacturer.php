@@ -1,24 +1,19 @@
 <?php
+
 if (isset($_POST['name'])) {
-   $db = new mysqli("localhost" , "root" , null , "company");;
-   $name = $_POST['name'];
-   $address = $_POST['address'];
-   $contact = $_POST['contact'];   
-
-   $queryString = "call manufact('$name','$address','$contact')";
-
-   $db->query($queryString);
-   $sms = "<h1>Data Added Successfully !!</h1>";
-//    echo $sms;
-   $db->close();
-
+    $db = new mysqli('localhost','root',null,'evally');
+    $name = $_POST['name'];
+    $address = $_POST['address'];
+    $contact = $_POST['contact'];
+    $qurey = "call add_manufact('$name','$address','$contact')";
+    $db->query($qurey);
+    $sms = "<h1>Data Added Successfully !!</h1>";
+    $db->close();
 }
-
 ?>
 
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -28,10 +23,8 @@ if (isset($_POST['name'])) {
         td,
         input {
             padding: 5px;
-        }
-        
-    </style>
-    
+        }        
+    </style>    
 </head>
 
 <body>
