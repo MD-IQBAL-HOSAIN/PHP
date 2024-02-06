@@ -104,8 +104,6 @@ if (isset($_GET['product_id'])) {
                         </div>
 
 
-
-
                         <div class="row">
                             <div class="col-sm-6">
                             <div class="input-group mb-3">
@@ -159,21 +157,6 @@ if (isset($_GET['product_id'])) {
                             <div class="input-group-text">Created Time</div>
                             <input class="form-control" type="text" name="created" value="<?= $row['created'] ?>" require>
                         </div>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
                         <input class="btn btn-warning" type="submit" value="Update"> <br>
 
