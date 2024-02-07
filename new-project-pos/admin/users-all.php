@@ -30,7 +30,9 @@ $users = $db->get('users');
                         <caption><h1 class="text-center">All Users</h1></caption>
                         </div>
                         <div class="col">
-                            <a href=".php" class="btn btn-outline-success btn-warning">ADD Member</a>
+                            <h1></h1>
+                    
+                            <a href=".php" class="btn btn-outline-success">ADD Member</a>
                             <!-- <input class="btn btn-outline-success btn-warning" type="button" value="ADD Member" name="" id=""> -->
                         </div>
                     </div>
