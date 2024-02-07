@@ -11,6 +11,7 @@ if (!Admin::Check()) {
     exit;
 }
 $db = new MysqliDb();
+$db->where ("deleted_at", NULL, 'IS'); //soft delete
 $users = $db->get('users');
 ?>
 <?php require __DIR__ . '/components/header.php'; ?>
@@ -23,8 +24,19 @@ $users = $db->get('users');
         <div id="layoutSidenav_content">
             <main>
                 <!-- changed content -->
-                <h1>All Users</h1>
-                <table class="table table-responsive">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-8">
+                        <caption><h1 class="text-center">All Users</h1></caption>
+                        </div>
+                        <div class="col">
+                            <a href=".php" class="btn btn-outline-success btn-warning">ADD Member</a>
+                            <!-- <input class="btn btn-outline-success btn-warning" type="button" value="ADD Member" name="" id=""> -->
+                        </div>
+                    </div>
+                
+                   
+                    <table class="table table-responsive table-striped">
                     <tr>
                         <th>ID</th>
                         <th>Name</th>
@@ -36,12 +48,15 @@ $users = $db->get('users');
 
                     <?php
                     foreach ($users as $user) {
+                        if($user['role']== 2){$usercat= "<span class='text-success'><b>Admin</b></span>";}
+                        elseif($user['role']== 1) $usercat = "<span class='text-primary'>User</span>";
+                        else $usercat = "<span class='text-danger'>Deactive</span>";
                         // echo $user['name']."(".$user['email'].")<br>";
                         echo "<tr>
                              <td>" . $user['id'] . "</td>
                              <td>" . $user['name'] . "</td>
                              <td>" . $user['email'] . "</td>
-                             <td>" . $user['role'] . "</td>
+                             <td>" . $usercat. "</td>
                             <td>" . $user['created_at'] . "</td>
                             <td><a href='user_edit.php?id={$user['id']}'><i class='bi bi-pencil-square'></i></a> <a href='user_delete.php?id={$user['id']}' onclick='return confirm(\"Are you sure want to delete ?\")'><i class='bi bi-trash3'></i></a> </td>
 
@@ -49,6 +64,7 @@ $users = $db->get('users');
                     }
                     ?>
                 </table>
+                </div>
                 <!-- changed content  ends-->
             </main>
             <!-- footer -->

@@ -26,9 +26,10 @@ if (isset($_POST['username'])) {
             'role' => $role
         ];
         $db->where('id', $idtoupdate);
-        if ($db->update('users', $data))
+        if ($db->update('users', $data)){
             //echo $db->count . ' records were updated';
             $message = "User Updated successfully";
+            header('location: users-all.php');}
         else
             $message = "Something went wrong, " . $db->getLastError();
     }
@@ -107,6 +108,7 @@ if (isset($_GET['id'])) {
                         <select name="role" id="">
                             <option value="1" <?= ($row['role'] == "1") ? "selected" : "" ?>>User</option>
                             <option value="2" <?= ($row['role'] == "2") ? "selected" : "" ?>>Admin</option>
+                            <option value="3" <?= ($row['role'] == "3") ? "selected" : "" ?>>Deactive</option>
                         </select> <br>
                         <input type="submit" value="Update">
                     </div>
