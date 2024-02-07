@@ -5,7 +5,7 @@ if (!function_exists('settings')) {
        $root = "http://localhost/Round-57(PHP_CLASS)/PHP/new-project-pos/"; 
         return [
             'root'  => $root,
-            'companyname'=> '<i>Lazy Shark</i>',
+            'companyname'=> '<i>Best Buy Super Shop</i>',
             'logo'=>$root."admin/assets/img/shark2.jpeg",
             'homepage'=> $root,
             'adminpage'=>$root.'admin/',

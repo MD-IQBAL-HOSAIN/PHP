@@ -24,88 +24,61 @@ if (isset($_POST['reg'])) {
 <head>
 </head>
 
-<body style="background-color: bisque;">
+<body>
   <div class="container">
+
+  <img src="<?= settings()['logo'] ?>" alt="">
+  <span style="font-size: 30px; color:chocolate; margin-left: 200px;"><strong><i>BEST BUY SUPER SHOP</i></strong></span> <br>
+
     <?php require __DIR__ . '/components/menubar.php'; ?>
 
+    <div style="background-color: light-gray; border-radius:20px; box-shadow: 0px 0px 25px black; padding:20px;  margin-right: 20%;">
     <h2 style="margin-left: 25%; margin-bottom:20px">Create an account</h2>
     <?php require __DIR__ . '/components/dismissalert.php'; ?>
-    <!--  -->
-    <form style="margin-left: 20%;" class="row g-3 needs-validation" novalidate method="post" action="<?= $_SERVER['PHP_SELF'] ?>">
-      <div class="col-md-4">
-        <input type="text" class="form-control" name="firstname" id="firstname" value="" required placeholder="First name">
-        <!-- <label for="firstname" class="form-label">First name</label> -->
-
-        <div class="valid-feedback">
-          Looks good!
+    <!-- form -->
+    
+      <form style="margin-left: 20%;" class="row g-3 needs-validation" novalidate method="post" action="<?= $_SERVER['PHP_SELF'] ?>">
+        <div class="col-md-4">
+          <input type="text" class="form-control" name="firstname" id="firstname" value="" required placeholder="First name">         
         </div>
-
-      </div>
-      <h1></h1>
-      <div class="col-md-4">
-        <input type="text" class="form-control" name="lastname" id="lastname" value="" required placeholder="Last name">
-        <!-- <label for="lastname" class="form-label">Last name</label> -->
-
-        <div class="valid-feedback">
-          Looks good!
+        <h1></h1>
+        <div class="col-md-4">
+          <input type="text" class="form-control" name="lastname" id="lastname" value="" required placeholder="Last name">         
         </div>
-      </div>
-      <h1></h1>
-      <div class="col-md-4">
-        <input type="text" class="form-control" id="username" name="username" aria-describedby="inputGroupPrepend" required placeholder="User name">
-        <!-- <label for="username" class="form-label">Username</label> -->
-        <div class="invalid-feedback">
-          Please choose a username.
+        <h1></h1>
+        <div class="col-md-4">
+          <input type="text" class="form-control" id="username" name="username" aria-describedby="inputGroupPrepend" required placeholder="User name">  
         </div>
-
-
-      </div>
-      <h1></h1>
-      <div class="col-md-4">
-
-        <input type="email" class="form-control" id="email" name="email" required placeholder="yourname@domain.com">
-        <!-- <label for="email" class="form-label">Email</label> -->
-        <div class="invalid-feedback">
-          Please provide a valid email.
+        <h1></h1>
+        <div class="col-md-4">
+          <input type="email" class="form-control" id="email" name="email" required placeholder="yourname@domain.com">      
         </div>
-        <div class="valid-feedback">
-          Email Valid!!
+        <h1></h1>
+        <div class="col-md-4">
+          <input type="password" minlength="5" class="form-control" id="pass1" name="pass1" required placeholder="Password">         
         </div>
-      </div>
-      <h1></h1>
-      <div class="col-md-4">
-        <input type="password" minlength="5" class="form-control" id="pass1" name="pass1" required placeholder="Password">
-        <!-- <label for="pass1" class="form-label">Password</label> -->
-        <div class="invalid-feedback">
-          Please provide a valid password.
+        <h1></h1>
+        <div class="col-md-4">
+          <input type="password" minlength="5" class="form-control" id="pass2" name="pass2" required placeholder="Re-type password">         
         </div>
-      </div>
-      <h1></h1>
-      <div class="col-md-4">
-        <input type="password" minlength="5" class="form-control" id="pass2" name="pass2" required placeholder="Re-type password">
-        <!-- <label for="pass2" class="form-label">Retype Password</label> -->
-        <div class="invalid-feedback">
-          Please provide a valid length password.
-        </div>
-      </div>
-      <h1></h1>
-      <div class="col-12">
-        <div class="form-check">
-
-          <label class="form-check-label" for="invalidCheck">
-            Agree to terms and conditions
-          </label>
-          <input class="form-check-input" type="checkbox" value="" id="invalidCheck" required>
-          <div class="invalid-feedback">
-            You must agree before submitting.
+        <h1></h1>
+        <div class="col-12">
+          <div class="form-check">
+            <label class="form-check-label" for="invalidCheck">
+              Agree to terms and conditions
+            </label>
+            <input class="form-check-input" type="checkbox" value="" id="invalidCheck" required>
+            <div class="invalid-feedback">
+              You must agree before submitting.
+            </div>
           </div>
         </div>
-      </div>
-      <h1></h1>
-      <div class="col-12">
-        <button class="btn btn-primary" type="submit" name="reg" value="Sign Up">Register</button>
-      </div>
-    </form>
+        <h1></h1>
+        <div class="col-12">
+          <button class="btn btn-primary" type="submit" name="reg" value="Sign Up">Register</button>
+        </div>
+      </form>
+    </div>
     <!--  -->
     <?php
     // echo testfunc();
