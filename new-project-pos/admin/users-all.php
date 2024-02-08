@@ -12,7 +12,12 @@ if (!Admin::Check()) {
 }
 $db = new MysqliDb();
 $db->where ("deleted_at", NULL, 'IS'); //soft delete
+if(isset($_GET["accs"])){
+    $db->where('role', $_GET["accs"]);
+
+}
 $users = $db->get('users');
+
 ?>
 <?php require __DIR__ . '/components/header.php'; ?>
 </head>
@@ -27,12 +32,23 @@ $users = $db->get('users');
                 <div class="container">
                     <div class="row">
                         <div class="col-8">
-                        <caption><h1 class="text-center">All Users</h1></caption>
+                        <caption><h1 class="text-center">All User
+        <!-- <?php
+        // if(!isset($_GET["accs"])){
+        //     echo "All Users";}
+        //     elseif($_GET["accs"]=2){
+        //         echo "Admin";}
+        //     elseif($_GET["accs"]=1){
+        //         echo "User";
+        //     }
+        //     else echo "Deactive"
+        ?> -->
+        </h1></caption>
                         </div>
                         <div class="col">
                             <h1></h1>
                     
-                            <a href=".php" class="btn btn-outline-success">ADD Member</a>
+                            <a href="user_create.php" class="btn btn-outline-success">ADD Member</a>
                             <!-- <input class="btn btn-outline-success btn-warning" type="button" value="ADD Member" name="" id=""> -->
                         </div>
                     </div>

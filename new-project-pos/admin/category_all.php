@@ -34,8 +34,8 @@ $categories = $db->get('categories');
                     ?>
                 </ul>
                 <?php
-require 'product.php'
-?>
+                require 'product.php'
+                ?>
 
 
                 <!-- changed content  ends-->

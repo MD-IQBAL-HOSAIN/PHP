@@ -34,7 +34,9 @@
                 <div class="collapse" id="collapseUsers" aria-labelledby="headingOne" data-bs-parent="#sidenavAccordion">
                     <nav class="sb-sidenav-menu-nested nav">
                         <a class="nav-link" href="users-all.php">All</a>
-                        <a class="nav-link" href="layout-sidenav-light.html">Add</a>
+                        <a class="nav-link" href="users-all.php?accs=2">Admin</a>
+                        <a class="nav-link" href="users-all.php?accs=1">User</a>
+                        <a class="nav-link" href="users-all.php?accs=3">Deactive</a>
                     </nav>
                 </div>
                 <a class="nav-link collapsed" href="#" data-bs-toggle="collapse" data-bs-target="#collapsePages" aria-expanded="false" aria-controls="collapsePages">
