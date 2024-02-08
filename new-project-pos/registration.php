@@ -1,4 +1,4 @@
-<!-- <?php
+<?php
 require __DIR__ . '/vendor/autoload.php';
 $page = "Registration";
 if (isset($_POST['reg'])) {
@@ -87,4 +87,4 @@ if (isset($_POST['reg'])) {
   <script>
 
   </script>
-  <?php require __DIR__ . '/components/footer.php'; ?> -->
+  <?php require __DIR__ . '/components/footer.php'; ?>
